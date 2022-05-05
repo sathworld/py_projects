@@ -1,3 +1,4 @@
+# Converts a Roman Numeral to an integer
 def roman_to_int(roman_number):
     # Dictionary for transcoding each value
     conversion_dictionary = {'': 0, 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
@@ -19,7 +20,7 @@ def roman_to_int(roman_number):
         old_character = character
     return int_number
 
-
+# Converts an integer between 0 and 3999 to a Roman Numeral
 def int_to_roman(int_number):
     # Dictionary for transcoding each value
     conversion_dictionary = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L', 90: 'XC', 100: 'C',

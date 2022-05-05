@@ -1,3 +1,4 @@
+# Gives the indices of numbers in the array sum of which will give the target number
 def two_sum(numbers, target):
     # Creating an empty hashmap
     hashmap = {}
