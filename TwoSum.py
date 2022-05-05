@@ -1,12 +1,15 @@
 def two_sum(numbers, target):
-    # Sifting through all numbers until we find a pair
+    # Creating an empty hashmap
+    hashmap = {}
     for i in range(len(numbers)):
-        try:
-            j = numbers.index(target - numbers[i])
-            if i == j:
-                continue
-            else:
-                return i, j
-        except ValueError:
-            # Do nothing
-            continue
+        # Evaluating the number at the chosen index
+        n = numbers[i]
+        # Difference between target and current number
+        difference = target - n
+        # Searching hashmap for key
+        if difference in hashmap:
+            # Returning the set of indices
+            return i, hashmap[difference]
+        else:
+            # Adding a new item pair to the hashmap
+            hashmap[n] = i
